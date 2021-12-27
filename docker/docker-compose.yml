@@ -1,0 +1,19 @@
+version: "3"
+services:
+  timescaledb:
+    container_name: "timescaledb"
+    hostname: "timescaledb"
+    image: timescale/timescaledb:2.5.1-pg14
+    restart: "always"
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: timescaledb
+      POSTGRES_DB: timescaledb
+      POSTGRES_PASSWORD: timescaledb
+    volumes:
+      - postgresql-data:/var/lib/postgresql
+
+volumes:
+  postgresql-data:
+    name: postgresql-data
