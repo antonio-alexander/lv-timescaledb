@@ -15,3 +15,7 @@
 *.aliases
 *.lvlps
 .cache/
+
+# Build Objects
+distribution/vipm/*.vip
+!distribution/working/.gitkeep
